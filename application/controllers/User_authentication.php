@@ -36,7 +36,7 @@ class User_Authentication extends CI_Controller
 			$userID = $this->user_model->checkUser($userData);
 			
 			if(!empty($userID)){
-				$data['userData'] = $userData,
+				$data['userData'] = $userData;
 				$this->session->set_userdata('userData', $userData);
 			}else{
 				$data['userData'] = array();
